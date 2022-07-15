@@ -1,0 +1,6 @@
+NOTA: No voy a colocar los apuntes del index, ya que sencillamente esa es la interfaz y la puede hacer
+diferente  con otra plantilla y demas, estos apuntes son del scripts del Crud.
+
+
+
+

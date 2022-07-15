@@ -1,0 +1,83 @@
+Proceso para que crear una ApiRest con Nodejs.
+
+req= peticion
+res=respuesta
+
+npm: es el gestor de paquetes de nodejs
+
+1.Se crea el proyecto
+2. Se abre la terminal y se coloca npm init -y para que directamente se cree el proyecto
+
+Nota: se utiliza cls para limpiar la consola.
+
+3. Luego instalamos Express mysql para instalar un modulo, este creara claves valor que se llaman 
+dependencias 
+
+4. npm install express --save con este comando se instala express, se coloca --save para que se guarde
+en la lista de dependencias.
+
+5. Luego se installa mysql comando=> npm install mysql 
+
+6. Despues crear un archivo .js , donde invocaremos los paquetes instalados anteriormente,
+con la palabra require invoco estos paquetes y los meto en una variable con el mismo nombre 
+del paquete.
+
+7. Luego hacemos referencia al constructor de express, con la variable que hemos creado en el punto 6.
+
+8. Aqui creamos un objeto con el nombre del archivo para que el
+servidor pueda acceder a los metodos y propiedades de la libreria express.
+
+9. Luego con la propiedad listen se crea un servidor en determinado puerto que este puerto es un parametro
+junto con una funcion que me dira si el servidor esta ok.
+
+
+10. Luego para mostrar algo en ese servidor y ver si todo va perfecto, se crea una funcion para mostrar algo 
+en el lado de la web.
+
+11. Luego creo la base de datos con su informacion.
+
+12. Aqui procedo hacer la conexion con la base de datos que este trabajando.
+
+
+EJEMPLO.
+
+/* Creación de una conexión a la base de datos. */
+var conexion = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password:'',
+    database:'restaurante_bd'
+});
+
+/* Conexión a la base de datos. */
+conexion.connect(function(error){
+    if(error){
+        throw error;
+    }else{
+        console.log("La conexion es exitosa");
+    }
+});
+
+
+
+13. Hacemos un metodo para mostrar los datos de la base de datos, luego que cree ese metodo
+para probar que todo funciona bien, prueba la ruta en la app postman.
+
+para crear esto vamos a necesitar los objetos que le designamos a express y mysql.
+
+
+14. Luego hacemos el mismo metodo de arriba pero en este caso solo tomara una fila y columna en especifico.
+
+
+15. Luego de esto vamos a crear un metodo que me servira para crear, en este caso se utiliza el metodo POST.
+
+16. Decirle a la aplicacion que vamos utilizar JSON.
+
+17. Luego hacemos un metodo que nos permita editar un platillo, se utiliza con el metodo PUT.
+
+18. Luego hacemos un metodo que nos permita eliminar un platillo, se utiliza con el metodo DELETE.
+
+19. luego instalamos el metodo cors para que no se nos bloquee la ruta.
+
+
+
